@@ -659,9 +659,9 @@ footer.site small {
 }
 
 .like.on {
-  background: #ffd700;
-  border-color: #d4a900;
-  color: var(--royal)
+  background: var(--royal);
+  border-color: var(--middle);
+  color: var(--next)
 }
 
 .like .heart {

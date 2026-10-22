@@ -18,6 +18,10 @@ import onime13_image from   './assets/office.jpg'
 import onime14_image from   './assets/wecan1.jpg'
 import onime15_image from   './assets/facemask.jpeg'
 import onime16_image from   './assets/daystar1.jpg'
+import onime17_image from   './assets/onime17.jpeg'
+import onime18_image from   './assets/tiktok.jpg'
+import onime19_image from   './assets/onime19.jpeg'
+import onime20_image from   './assets/Nba.jpg'
 
 import { isSupabaseConfigured, supabase } from "./supabase";
 /* ===== EDIT ME: name, age and all page content live here ===== */
@@ -34,14 +38,19 @@ const MEMORIES = [
   { id: "m7", caption: "Her in smecca plaza", src:onime7_image  },
   { id: "m8", caption: "Her taking sunday pictures ", src:onime8_image },
   { id: "m9", caption: "Celebrating her birthday in church Rehoboth hall", src: onime9_image },
+  { id: "m17", caption: "Her and family  ", src: onime17_image },
+  { id: "m19", caption: "Her taking sunday picture with family", src: onime19_image },
+  { id: "m20", caption: "Her taking sunday picture at daystar", src: onime20_image },
   { id: "m10", caption: "Her after work ", src: onime10_image },
   { id: "m11", caption: "Her leading praise in ibafo church", src:onime11_image  },
   { id: "m45", caption: "Her at ICMC Graduation", src:onime3_image  },
   { id: "m12", caption: "Her taking sunday picture in assese church", src:onime12_image  },
+  { id: "m20", caption: "Her at NBA ", src: onime20_image },
   { id: "m13", caption: "Her at Her law firm in ikeja ", src: onime13_image },
   { id: "m14", caption: "Her in wecan school", src: onime14_image },
   { id: "m15", caption: "Her with Her Tumeric facemask", src:onime15_image },
   { id: "m16", caption: "Her taking sunday picture at daystar", src: onime16_image },
+  { id: "m18", caption: "Her laughing to a joke ", src: onime18_image },
 ];
 
 // const TRAITS = [

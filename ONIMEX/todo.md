@@ -5,7 +5,7 @@
 - [ ] In the new Supabase project, open the SQL Editor and run the contents of `supabase/schema.sql`.
 - [x] Copy the project URL and anon/publishable key from Supabase project settings. Keep the service-role key private.
 - [x] Add the Supabase values to a local `.env` file as `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` so you can test the site locally.
-- [ ] Push the project to GitHub. Do not commit Supabase credentials.
+- [x] Push the project to GitHub. Do not commit Supabase credentials.
 - [ ] Connect the GitHub repository to the hosting service. Set the project root to `ONIMEX` if the repository contains that folder.
 - [ ] Configure the build command as `npm run build` and the output directory as `dist`.
 - [ ] Add the same `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` values in the hosting service's project settings.
@@ -15,4 +15,3 @@
 - [ ] Test the final domain on desktop and mobile, including posting a wish and refreshing the page.
 
 
-,KSd$rU9SGqSZLi
