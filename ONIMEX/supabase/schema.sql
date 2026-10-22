@@ -19,7 +19,8 @@ alter table public.memory_likes
   add constraint memory_likes_memory_id_check
   check (memory_id in (
     'm1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'm8', 'm9',
-    'm10', 'm11', 'm12', 'm13', 'm14', 'm15', 'm16', 'm45'
+    'm10', 'm11', 'm12', 'm13', 'm14', 'm15', 'm16',
+    'm17', 'm18', 'm19', 'm20', 'm21', 'm45'
   ));
 
 alter table public.wishes enable row level security;

@@ -45,7 +45,7 @@ const MEMORIES = [
   { id: "m11", caption: "Her leading praise in ibafo church", src:onime11_image  },
   { id: "m45", caption: "Her at ICMC Graduation", src:onime3_image  },
   { id: "m12", caption: "Her taking sunday picture in assese church", src:onime12_image  },
-  { id: "m20", caption: "Her at NBA ", src: onime20_image },
+  { id: "m21", caption: "Her at NBA ", src: onime20_image },
   { id: "m13", caption: "Her at Her law firm in ikeja ", src: onime13_image },
   { id: "m14", caption: "Her in wecan school", src: onime14_image },
   { id: "m15", caption: "Her with Her Tumeric facemask", src:onime15_image },
