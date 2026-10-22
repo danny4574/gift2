@@ -1,0 +1,700 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500&display=swap'); */
+
+/* ===== Design tokens: change colours and fonts here ===== */
+:root {
+  --cream: #Fff19C;
+  --blush: #F4D6D0;
+  --blush-deep: #EBB9B3;
+  --rose: #B76E79;
+  --rose-dark: #8C4A56;
+  --ink: #2E2A2B;
+  --ink-soft: #6B6163;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Poppins', system-ui, sans-serif;
+  --pad: clamp(1.25rem, 5vw, 4rem);
+  --cold:#ffd900a9;
+  --next:#Fff9f0;
+  --royal:#7851A9;
+  --middle:#9b64b2;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--next);
+
+
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1.15
+}
+
+section {
+  padding: clamp(3.5rem, 9vw, 7rem) 
+ } 
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  color:var(--middle);
+}
+
+.lede {
+  color: var(--middle);
+  max-width: 52ch;
+  margin-bottom: 2.5rem
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--rose);
+  outline-offset: 3px
+}
+
+/* ===== Nav ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: .8rem var(--pad);
+  border-bottom: none;
+  background: transparent;
+  /* font-family: 'Courier New', Courier, monospace; */
+  backdrop-filter: blur(8px);
+  
+  border-bottom: 1px solid var(--blush)
+}
+
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500
+
+}
+
+nav a:hover {
+  color: var(--ink-soft)
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: radial-gradient(circle at 85% 20%, var(--middle) 0, transparent 45%), radial-gradient(circle at 5% 90%, var(--middle) 0, transparent 40%), var(--next);
+  /* background:black; */
+  /* background: url("./assets/golden2.jpg") center / cover no-repeat; */
+  overflow: hidden
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 3rem;
+  align-items: center;
+  min-height: 100vh;
+  /* background:black */
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  color: var(--ink-soft)
+}
+
+.hero h1 em {
+  display: block;
+  color: var(--ink);
+  font-style: italic
+}
+
+.tagline {
+  margin: 1.5rem 0 2rem;
+  font-size: 1.1rem;
+  color: var(--ink);
+  max-width: 34ch
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
+  font: 400 1rem var(--sans);
+  padding: .85rem 1.8rem;
+  border-radius: 999px;
+  background: var(--next);
+  border: 1.5px solid var(--middle);
+  color: var(--middle);
+  text-decoration: none;
+  transition: background .2s, transform .2s
+}
+
+.btn:hover {
+  background: var(--cream); 
+  color: var(--ink-soft );
+  border: 1.5px solid var(--ink);
+  transition: ease;
+}
+
+.btn:active {
+  transform: scale(.97)
+}
+
+.btn.ghost {
+  background: var(--middle);
+  color: var(--next);
+  border: 1.5px solid var(--next);
+  margin-left: .6rem
+}
+
+.btn.ghost:hover {
+  background: var(--cream);
+  color:var(--middle);
+  border: 1.5px solid var(--middle);
+}
+
+/* The arched photo frame: the page's centrepiece */
+.frame {
+  position: relative;
+  width: min(100%, 380px);
+  aspect-ratio: 3/4;
+  margin: 0 auto
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  /* border-radius: 999px 999px 24px 24px; */
+  border: 2px solid var(--next);
+  opacity: .7
+}
+
+.frame .photo {
+  position: absolute;
+  inset: 0;
+  /* border-radius: 999px 999px 16px 16px; */
+  overflow: hidden;
+  box-shadow: 0 30px 60px -25px rgba(7, 0, 4, 0.55)
+}
+
+.badge {
+  position: absolute;
+  right: -18px;
+  bottom: 36px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--cold);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font: 500 1.9rem/1 var(--serif);
+  border: 3px solid var(--next)
+}
+
+.badge small {
+  display: block;
+  font: 300 .65rem var(--sans);
+  margin-top: .2rem;
+  color: var(--cold)
+}
+
+/* Photo placeholders. To use a real photo, replace <div class="ph">…</div> with <img src="your-photo.jpg" alt="Describe the photo"> */
+.photo img,
+.photo .ph {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block
+}
+
+.ph {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: .85rem;
+  color: var(--rose-dark);
+  background: linear-gradient(135deg, var(--blush), #F9E8DF)
+}
+
+.ph::before {
+  content: "\1F4F7";
+  display: block;
+  font-size: 2rem;
+  margin-bottom: .3rem
+}
+
+/* Hero entrance: the only automatic motion on the page */
+@media (prefers-reduced-motion:no-preference) {
+
+  .hero .intro>*,
+  .hero .frame {
+    opacity: 0;
+    animation: rise .9s cubic-bezier(.2, .7, .2, 1) forwards
+  }
+
+  .hero .intro>:nth-child(2) {
+    animation-delay: .15s
+  }
+
+  .hero .intro>:nth-child(3) {
+    animation-delay: .3s
+  }
+
+  .hero .frame {
+    animation-delay: .25s
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+/* ===== Memory Lane ===== */
+#memories {
+  color: var(--middle);
+  background: linear-gradient(145deg, #Fff9f0, #Fff9f0 58%, #9b64b2);
+}
+
+/* #memories h2 {
+  color: #ffd700;
+} */
+
+#memories .lede {
+  color: rgba(17, 14, 14, 0.86);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  align-items: start
+}
+
+.polaroid {
+  color: #39245a;
+  background: var(--next);
+  padding: .8rem .8rem 1.1rem;
+  border: 2px solid #9b64b2;
+  box-shadow: 0 14px 30px -18px rgba(20, 10, 36, .8);
+  border-radius: 8px
+}
+
+
+.polaroid:nth-child(odd) {
+  transform: rotate(-1.2deg);
+  /* background:var(--cold); */
+}
+
+.polaroid:nth-child(even) {
+  transform: rotate(1deg);
+  margin-top: 1.5rem
+}
+
+.polaroid .photo {
+  object-fit:cover;
+  aspect-ratio:4/5;
+  overflow:hidden
+}
+
+.polaroid:nth-child(3n) .photo {
+  aspect-ratio: 1/1
+
+}
+.polaroid .photo img {
+  object-fit: contain
+}
+.polaroid figcaption {
+  margin-top: .8rem;
+  font-size: .9rem
+}
+
+.polaroid b {
+  display: block;
+  font: 500 1.15rem var(--serif);
+
+}
+
+/* ===== Guestbook ===== */
+.guest {
+  /* background: var(--blush) */
+  background: linear-gradient(145deg, var(--next), #9b64b2 58%,   #Fff9f0);
+}
+.guest h2{
+  color:var(--middle)
+}
+.guest .lede{
+  color:var(--ink);
+}
+.guest .cols {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2.5rem;
+  align-items: start
+}
+
+.notes {
+  display: grid;
+  gap: 1rem;
+  max-height: 560px;
+  overflow-y: auto;
+  padding: .3rem .5rem .5rem 0
+}
+
+.note {
+  background: var(--next);
+  padding: 1.2rem 1.4rem;
+  border-radius: 16px 16px 16px 2px;
+  border-left: 4px solid var(--ink-soft)
+
+}
+
+.note p {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.5
+}
+
+.note footer {
+  margin-top: .6rem;
+  font-size: .85rem;
+  color: var(--ink-soft)
+}
+
+.note.fresh {
+  animation: rise .6s ease both
+}
+
+form {
+  background: var(--ink );
+  padding: 1.6rem;
+  border-radius: 20px;
+  display: grid;
+  gap: 1rem;
+  position: sticky;
+  top: 5rem
+}
+
+form h3 {
+  font-size: 1.5rem;
+  color: var(--next);
+}
+
+label {
+  font-size: .85rem;
+  font-weight: 400;
+  display: grid;
+  gap: .3rem;
+  color: var(--next);
+}
+
+input,
+textarea,
+select {
+  font: 300 1rem var(--sans);
+  padding: .7rem .9rem;
+  border: 1.5px solid var(--blush-deep);
+  border-radius: 10px;
+  background: var(--next);
+  color: var(--ink)
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical
+}
+form .btn :hover{
+  background: var(--cold);
+  color: var(--ink);
+}
+
+.status {
+  font-size: .9rem;
+  color: var(--rose-dark);
+  min-height: 1.4em
+}
+
+/* ===== Why We Love You (cards are deliberately different sizes and colours) ===== */
+.love {
+  
+  
+  background: var(--next);
+  color: var(--ink);
+}
+.love h2{
+    gap:rem;
+}
+
+.card {
+  padding: 1.8rem;
+  border-radius: 24px
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: .6rem
+}
+
+.card.big {
+  grid-column: span 4;
+  background: var(--middle);
+  color: var(--next);
+  border-radius: 24px 80px 24px 24px;
+  padding: 2.4rem
+}
+
+.card.big h3 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem)
+}
+
+.card.faves {
+  grid-column: span 2;
+  background: var(--ink);
+  color: var(--middle)
+}
+
+.card.faves ul {
+  list-style: none;
+  padding: 0
+}
+
+.card.faves li {
+  padding: .5rem 0;
+  border-bottom: 1px solid rgba(251, 244, 236, .18)
+}
+
+/* .card.faves li:last-child {
+  border: 0
+} */
+.special{
+  color: var(--ink);
+  font-weight: 500;
+}
+.card.faves span {
+  display: block;
+  font-size: .8rem;
+  color: var(--blush)
+}
+
+.card.trait {
+  grid-column: span 2;
+  background: var(--ink);
+  border: 1.5px solid var(--blush-deep);
+  border-radius: 24px 24px 80px 24px;
+  color:  var(--middle);
+}
+
+.card.trait:nth-of-type(5) {
+  border-radius: 80px 24px 24px 24px;
+  background: var(--middle);
+  color: var(--ink);
+}
+/* 
+.card.trait .emoji {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: .4rem
+} */
+
+/* ===== Footer ===== */
+footer.site {
+  background: var(--ink);
+  color: var(--next);
+  text-align: center;
+  padding: 4rem var(--pad)
+}
+
+footer.site h2 {
+  color: var(--next)
+}
+
+footer.site p {
+  max-width: 48ch;
+  margin: 0 auto 1.5rem;
+  color: var(--next)
+}
+
+footer.site small {
+  color: var(--middle)
+}
+
+/* Confetti (triggered by the button) */
+.bit {
+  position: fixed;
+  top: -12px;
+  width: 9px;
+  height: 14px;
+  z-index: 99;
+  pointer-events: none;
+  animation: fall linear forwards
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg)
+  }
+}
+
+/* ===== Responsive ===== */
+@media(max-width:820px) {
+
+  .hero .wrap,
+  .guest .cols {
+    grid-template-columns: 1fr
+  }
+
+  .hero .wrap {
+    min-height: 0;
+    text-align: center
+  }
+
+  .tagline {
+    margin-inline: auto
+  }
+
+  .frame {
+    width: min(78%, 320px);
+    margin-top: 1rem
+  }
+
+  .badge {
+    right: -8px;
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem
+  }
+
+  .love {
+    grid-template-columns: 1fr
+  }
+
+  .card.big,
+  .card.faves,
+  .card.trait {
+    grid-column: auto
+  }
+
+  form {
+    position: static
+  }
+
+  .btn.ghost {
+    margin: .6rem 0 0
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto
+  }
+
+  .bit {
+    display: none
+  }
+}
+
+/* ===== Like button on each Memory Lane card ===== */
+.polaroid figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: .5rem
+}
+
+.like {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  cursor: pointer;
+  font: 400 .85rem var(--sans);
+  padding: .35rem .75rem;
+  border-radius: 999px;
+  border: 1.5px solid #7851a9;
+  background: #fff;
+  color: #684399;
+  transition: background .2s, border-color .2s
+}
+
+.like:hover {
+  background: #f4edfc
+}
+
+.like.on {
+  background: #ffd700;
+  border-color: #d4a900;
+  color: var(--royal)
+}
+
+.like .heart {
+  display: inline-block;
+  font-size: 1.05rem;
+  line-height: 1
+}
+
+.like.on .heart {
+  animation: pop .45s cubic-bezier(.3, 1.6, .5, 1)
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(.6)
+  }
+
+  60% {
+    transform: scale(1.5)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+.hearts-total {
+  color: var(--rose-dark);
+  font-weight: 400
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .like.on .heart {
+    animation: none
+  }
+}
